@@ -5,18 +5,21 @@
 <head>
 	<title> Hello World </title>
 
-		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
 
-		<link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+	<link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
 
-		<link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+	<link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
 
-		<link rel="alternate" type= "application/atom+xml" href="https://www.oneindia.com/rss/news-business-fb.xml">
+	<link rel="alternate" type= "application/atom+xml" href="https://www.oneindia.com/rss/news-business-fb.xml"> 
+
+	<link rel="alternate" type= "application/atom+xml" href="http://zeenews.india.com/tamil/india.xml">
+
 </head>
 <body>
-	{% for article in news %}
-		<h1>{{article.title}} </h1>
-		<p>{{article.description}}</p>
-	{% endfor %}	
+	{% for article in feed.entries %}
+		<h3>{{ article.title }} </h3>
+		<p>{{ article.summary }}</p>
+	{% endfor %}
 </body>
 </html>
