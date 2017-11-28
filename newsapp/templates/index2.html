@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>News sites</title>
+	</head>
+	<body>
+		<form action="/base" method="post">
+			{% csrf.token %}
+			User Name: <input type="text" name="username">
+			Password: <input type="password" name="password">
+			<input type="submit" name="Login">
+		</form>
+	</body>
+</html>
